@@ -1,0 +1,140 @@
+.top-block {
+  min-height: 100vh;
+
+  .carousel-item {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
+      min-width: 101%;
+      min-height: 101%;
+      z-index: -1;
+    }
+  }
+  .carousel-wrap {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px 15px 120px;
+    position: relative;
+
+    @media (max-width: 1500px) {
+      padding-bottom: 30px;
+    }
+
+    .top {
+      width: 100px;
+      height: 2px;
+      background-color: #ffffff;
+      opacity: 0.41;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (max-width: 1500px) {
+        display: none;
+      }
+    }
+    .right {
+      width: 2px;
+      height: 100px;
+      background-color: #ffffff;
+      opacity: 0.41;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (max-width: 1500px) {
+        display: none;
+      }
+    }
+    .bottom {
+      width: 100px;
+      height: 2px;
+      background-color: #ffffff;
+      opacity: 0.41;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+
+      @media (max-width: 1500px) {
+        display: none;
+      }
+    }
+    .left {
+      width: 2px;
+      height: 100px;
+      background-color: #ffffff;
+      opacity: 0.41;
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+
+      @media (max-width: 1500px) {
+        display: none;
+      }
+    }
+
+    .text {
+      max-width: 580px;
+      margin-top: 100px;
+
+
+
+      h1 {
+        color: #fff;
+        @include fontSize(40px);
+        line-height: 1.5;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        @media only screen and (max-width : 1080px){
+          @include fontSize(30px);
+        }
+      }
+
+      p {
+        color: #fff;
+        @include fontSize(30px);
+        font-weight: 100;
+        line-height: 40px;
+
+        @media only screen and (max-width : 1080px){
+          @include fontSize(25px);
+        }
+      }
+
+      a {
+        color: #fff;
+        padding: 0 25px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 40px;
+        border-radius: 3px;
+        border: 1px solid #fff;
+        display: inline-block;
+        transition: all ease-in 0.25s;
+        margin-top: 30px;
+        text-decoration: none;
+        outline: none;
+
+        &:hover {
+          background: rgba(218, 218, 218, 0.3);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .owl-nav {display: none;}
+}

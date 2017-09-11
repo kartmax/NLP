@@ -1,0 +1,129 @@
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width : 1080px){
+      align-items: flex-start;
+    }
+  }
+
+
+  .right-head {
+    position: relative;
+    display: flex;
+    width: 78%;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width : 1080px){
+      width: 50%;
+      justify-content: flex-end;
+    }
+
+  }
+
+  .menu-block {
+    @media only screen and (max-width : 1080px){
+     order: 2;
+    }
+    @media only screen and (max-width : 500px){
+     margin-top: 50px;
+    }
+  }
+
+  .menu-collapser{
+    background: none;
+  }
+  .menu-block ul {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0);
+
+    @media only screen and (max-width : 1080px){
+      flex-flow: column;
+      align-items: flex-start;
+      position: absolute;
+      right: 0;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    a {
+      color: #fff;
+      @include fontSize(14px);
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0 15px 15px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 3px;
+        background-color: #0294d5;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all ease-in 0.25s;
+
+        @media only screen and (max-width : 1080px) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        &:after {
+          content: '';
+          width: 35px;
+        }
+      }
+    }
+  }
+  .right-block {
+
+    @media only screen and (max-width : 1080px){
+      order: 1;
+      position: absolute;
+      left: -40px;
+    }
+    @media only screen and (max-width : 500px){
+      display: flex;
+      justify-content: flex-end;
+      right: 0;
+      top: 0;
+    }
+    a {
+      color: #fff;
+      padding: 0 25px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 40px;
+      border-radius: 3px;
+      border: 1px solid #fff;
+      display: inline-block;
+      transition: all ease-in 0.25s;
+      outline: none;
+      text-decoration: none;
+
+      &:hover {
+        background: rgba(218, 218, 218, 0.3);
+        text-decoration: none;
+      }
+    }
+
+
+  }
+
+}

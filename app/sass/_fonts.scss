@@ -1,0 +1,13 @@
+@import "bourbon";
+
+//@include font-face("roboto", "../fonts/RobotoRegular/RobotoRegular", $file-formats: eot woff ttf);
+//@include font-face("roboto", "../fonts/RobotoBold/RobotoBold", bold, $file-formats: eot woff ttf);
+@include font-face("Proxima nova", "../fonts/proxima-nova/ProximaNova-Regular/ProximaNova-Regular", $file-formats: eot woff ttf);
+@include font-face("Proxima nova", "../fonts/proxima-nova/ProximaNova-Light/ProximaNova-Light", 100, $file-formats: eot woff ttf);
+@include font-face("Proxima nova", "../fonts/proxima-nova/ProximaNova-Bold/ProximaNova-Bold", 600, $file-formats: eot woff ttf);
+@include font-face("Proxima nova", "../fonts/proxima-nova/ProximaNova-Semibold/ProximaNova-Semibold", 700, $file-formats: eot woff ttf);
+@include font-face("Proxima nova", "../fonts/proxima-nova/ProximaNova-ExtraBold/ProximaNova-Extrabld", 900, $file-formats: eot woff ttf);
+
+//Font Awesome
+@import "../fonts/font-awesome/scss/font-awesome";
+@include font-face("FontAwesome", "../fonts/font-awesome/fonts/fontawesome-webfont",  $file-formats: svg eot woff woff2 ttf);
